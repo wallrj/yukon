@@ -191,10 +191,10 @@ def card_icon(card):
 
 def list_join(join_object, list_in):
     list_iter = iter(list_in)
-    first_iteration = True
+    yield next(list_iter)
     for x in list_iter:
-        yield x
         yield join_object
+        yield x
 
 
 def draw_tableau(game):
